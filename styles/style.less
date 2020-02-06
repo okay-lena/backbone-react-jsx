@@ -1,0 +1,89 @@
+@app-font: Lato;
+@header-bg-color: crimson;
+@app-title-color: white;
+@recipe-list-item-border-color: #ccc;
+@recipe-img-bg-color: lightgrey;
+@recipe-details-font-color: #333;
+@recipe-details-font: Courgette;
+@recipe-details-credits-link-color: crimson;
+
+body {
+  font-family: @app-font;
+}
+header {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  background-color: @header-bg-color;
+}
+.appTitle {
+  text-decoration: none;
+  color: @app-title-color;
+}
+.searchForm {
+  padding-left: 5px;
+}
+#main {
+  max-width: 900px;
+  margin: auto;
+}
+.recipeList {
+  list-style-type: none;
+}
+.recipeList li {
+  display: flex;
+  float: left;
+  border: 1px solid @recipe-list-item-border-color;
+  width: 28%;
+  margin: 0 20px 20px 0;
+  padding: 10px;
+  height: 300px;
+  background-color: @recipe-img-bg-color;
+}
+.recipeList .recipeTitle {
+  margin: 5px 0;
+  font-size: 1.2em;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.cooktime {
+  display: flex;
+  margin-bottom: 10px;
+}
+.imgInListWrapper {
+  background-color: @recipe-img-bg-color;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  align-items: center;
+  width: 241px;
+}
+.view img {
+  margin: 10px 0;
+  width: auto;
+  max-height: 100%;
+  max-width: 220px;
+}
+
+.recipeDetails {
+  margin: 20px auto;
+  max-width: 800px;
+  color: @recipe-details-font-color;
+}
+.recipeDetails > * {
+  display: flex;
+  margin-bottom: 10px;
+}
+.recipeDetails .recipeTitle {
+  font-family: @recipe-details-font;
+  font-size: 2.5em;
+  margin: 10px 0;
+}
+.creditSource a {
+  color: @recipe-details-credits-link-color;
+}
+.imgDetailsWrapper {
+  background-color: @recipe-img-bg-color;
+  justify-content: center;
+}
+
