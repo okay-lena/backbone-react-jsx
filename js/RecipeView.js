@@ -1,8 +1,10 @@
-define(['eventAggregator'], function (eventAggregator) {
+define(
+  ['eventAggregator', 'text!recipeTemplate.html'],
+  function (eventAggregator, recipeTemplate) {
   const RecipeView =  Backbone.View.extend({
     tagName: 'li',
     id: 'recipe-list',
-    template: _.template($('#recipe-template').html()),
+    template: _.template(recipeTemplate),
     render: function () {
       this.$el.html(this.template(this.model.toJSON()))
       return this // enable chained calls
