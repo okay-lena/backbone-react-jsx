@@ -1,3 +1,4 @@
 define(function () {
-  return _.extend({}, Backbone.Events)
+  const eventAggregator = _.extend({}, Backbone.Events)
+  return eventAggregator
 })

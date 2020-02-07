@@ -1,6 +1,7 @@
 define(['Recipe'], function(Recipe){
-  return Backbone.Collection.extend({
+  const RecipeList = Backbone.Collection.extend({
     model: Recipe,
     localStorage: new Store("backbone-recipes")
   })
+  return RecipeList
 })

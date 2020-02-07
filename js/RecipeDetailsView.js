@@ -1,6 +1,6 @@
 // renders individual recipe item (li)
 define(['RecipeDetails'], function(RecipeDetails) {
-  return Backbone.View.extend({
+  const RecipeDetailsView = Backbone.View.extend({
     id: 'recipeDetails',
     model: RecipeDetails,
     template: _.template($('#recipe-details').html()),
@@ -9,4 +9,5 @@ define(['RecipeDetails'], function(RecipeDetails) {
       return this // enable chained calls
     },
   })
+  return RecipeDetailsView
 })

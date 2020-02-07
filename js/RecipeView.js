@@ -1,5 +1,5 @@
 define(['eventAggregator'], function (eventAggregator) {
-  return Backbone.View.extend({
+  const RecipeView =  Backbone.View.extend({
     tagName: 'li',
     id: 'recipe-list',
     template: _.template($('#recipe-template').html()),
@@ -15,4 +15,5 @@ define(['eventAggregator'], function (eventAggregator) {
       }
     },
   })
+  return RecipeView
 })

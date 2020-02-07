@@ -1,5 +1,5 @@
 define(function(){
-  return Backbone.Model.extend({
+  const Recipe = Backbone.Model.extend({
     defaults: {
       "id": null,
       "image": "",
@@ -11,5 +11,5 @@ define(function(){
       "title": ""
     }
   })
-
+  return Recipe
 })
