@@ -4,14 +4,16 @@ requirejs([
     'RecipeDetails',
     'RecipeList',
     'RecipeView',
-    'eventAggregator'
+    'eventAggregator',
+    'RecipeDetailsView',
   ],
  function (
    Recipe,
    RecipeDetails,
    RecipeList,
    RecipeView,
-   eventAggregator
+   eventAggregator,
+   RecipeDetailsView,
  ) {
 // models
 
@@ -21,18 +23,6 @@ requirejs([
 // event aggregator
 
 // views
-
-// renders individual recipe item (li)
-
-  const RecipeDetailsView = Backbone.View.extend({
-    id: 'recipeDetails',
-    model: RecipeDetails,
-    template: _.template($('#recipe-details').html()),
-    render: function () {
-      this.$el.html(this.template(this.model.toJSON()))
-      return this // enable chained calls
-    },
-  })
 
 // renders the full list of recipes calling RecipeView for each one
   const AppView = Backbone.View.extend({
@@ -67,7 +57,7 @@ requirejs([
       if (event.keyCode === 13 && query) {
         // should search recipes using API
         $.ajax({
-          url: `https://api.spoonacular.com/recipes/search?apiKey=82de3f92015a4978a427335171c863a4&number=6&query=${query}`,
+          url: `https://api.spoonacular.com/recipes/search?apiKey=82de3f92015a4978a427335171c863a4&number=3&query=${query}`,
           success: function (response) {
             // remove recipe details is any
             $('#recipeDetails').remove()
