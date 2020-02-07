@@ -1,33 +1,28 @@
 
-requirejs(['Recipe', 'RecipeDetails', 'RecipeList'],
- function (Recipe, RecipeDetails, RecipeList) {
+requirejs([
+    'Recipe',
+    'RecipeDetails',
+    'RecipeList',
+    'RecipeView',
+    'eventAggregator'
+  ],
+ function (
+   Recipe,
+   RecipeDetails,
+   RecipeList,
+   RecipeView,
+   eventAggregator
+ ) {
 // models
 
 // instance of the Collection
   const recipeList = new RecipeList()
 
 // event aggregator
-  const eventAggregator = _.extend({}, Backbone.Events)
 
 // views
 
 // renders individual recipe item (li)
-  const RecipeView = Backbone.View.extend({
-    tagName: 'li',
-    id: 'recipe-list',
-    template: _.template($('#recipe-template').html()),
-    render: function () {
-      this.$el.html(this.template(this.model.toJSON()))
-      return this // enable chained calls
-    },
-    events: {
-      'click .view': function (e) {
-        console.log('clicked', e)
-        // console.log('clicked id is ', e.target.children[1].innerHTML)
-        eventAggregator.trigger('recipe:selected', this.model)
-      }
-    },
-  })
 
   const RecipeDetailsView = Backbone.View.extend({
     id: 'recipeDetails',
