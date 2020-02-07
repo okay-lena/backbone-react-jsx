@@ -21,13 +21,13 @@ requirejs([
 
     eventAggregator.on('recipe:selected', function (recipe) {
       const urlPath = 'recipe/' + recipe.get('title')
-      router.navigate(urlPath)
+      router.navigate(urlPath, { trigger: true })
     })
 
 // initialize router
     const router = new Router()
     Backbone.history.start()
-    router.navigate('search')
+    router.navigate('search', { trigger: true })
 
 // initialize app view
     const appView = new AppView()
