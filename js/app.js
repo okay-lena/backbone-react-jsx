@@ -6,7 +6,7 @@ requirejs([
     'eventAggregator',
     'Views/RecipeDetailsView',
     'Views/AppView',
-    'Router',
+    'Routers/Router',
   ],
   function (
     Recipe,
