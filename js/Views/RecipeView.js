@@ -1,5 +1,5 @@
 define(
-  ['eventAggregator', 'text!recipeTemplate.html'],
+  ['eventAggregator', 'text!Templates/recipeTemplate.html'],
   function (eventAggregator, recipeTemplate) {
   const RecipeView =  Backbone.View.extend({
     tagName: 'li',
