@@ -1,6 +1,6 @@
 requirejs([
-    'Recipe',
-    'RecipeDetails',
+    'Models/Recipe',
+    'Models/RecipeDetails',
     'RecipeList',
     'Views/RecipeView',
     'eventAggregator',
