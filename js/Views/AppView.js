@@ -1,6 +1,6 @@
 // renders the full list of recipes calling RecipeView for each one
 define(
-  ['RecipeList', 'RecipeView', 'Recipe'],
+  ['RecipeList', 'Views/RecipeView', 'Recipe'],
   function(RecipeList, RecipeView, Recipe)  {
     // instance of the Collection
     const recipeList = new RecipeList()

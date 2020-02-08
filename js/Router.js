@@ -1,5 +1,5 @@
 define(
-  ['RecipeList', 'Views/AppView', 'RecipeDetails', 'RecipeDetailsView'],
+  ['RecipeList', 'Views/AppView', 'RecipeDetails', 'Views/RecipeDetailsView'],
   function (
     RecipeList,
     {AppView, recipeList},
