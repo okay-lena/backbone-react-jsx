@@ -1,20 +1,10 @@
 requirejs([
-    'Models/Recipe',
-    'Models/RecipeDetails',
-    'Collections/RecipeList',
-    'Views/RecipeView',
     'eventAggregator',
-    'Views/RecipeDetailsView',
     'Views/AppView',
     'Routers/Router',
   ],
   function (
-    Recipe,
-    RecipeDetails,
-    RecipeList,
-    RecipeView,
     eventAggregator,
-    RecipeDetailsView,
     {AppView, recipeList},    // import destructed values
     Router,
   ) {
