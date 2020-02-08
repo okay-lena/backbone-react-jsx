@@ -1,3 +1,10 @@
+require.config({
+  paths: {
+    text: 'libs/text'
+  }
+
+});
+
 requirejs([
     'eventAggregator',
     'Views/AppView',
