@@ -1,7 +1,7 @@
 requirejs([
     'Models/Recipe',
     'Models/RecipeDetails',
-    'RecipeList',
+    'Collections/RecipeList',
     'Views/RecipeView',
     'eventAggregator',
     'Views/RecipeDetailsView',
