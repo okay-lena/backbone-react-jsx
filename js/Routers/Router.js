@@ -1,7 +1,10 @@
 define(
-  ['Collections/RecipeList', 'Views/AppView', 'Models/RecipeDetails', 'Views/RecipeDetailsView'],
+  [
+    'Views/AppView',
+    'Models/RecipeDetails',
+    'Views/RecipeDetailsView'
+  ],
   function (
-    RecipeList,
     {AppView, recipeList},
     RecipeDetails,
     RecipeDetailsView
