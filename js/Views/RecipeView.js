@@ -1,6 +1,18 @@
 define(
-  ['eventAggregator', 'text!Templates/recipeTemplate.html'],
-  function (eventAggregator, recipeTemplate) {
+  [
+    'jquery',
+    'underscore',
+    'backbone',
+    'eventAggregator',
+    'text!Templates/recipeTemplate.html'
+  ],
+  function (
+    $,
+    _,
+    Backbone,
+    eventAggregator,
+    recipeTemplate
+  ) {
   const RecipeView =  Backbone.View.extend({
     tagName: 'li',
     id: 'recipe-list',

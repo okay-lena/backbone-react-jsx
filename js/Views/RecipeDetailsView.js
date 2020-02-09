@@ -1,7 +1,19 @@
 // renders individual recipe item (li)
 define(
-  ['Models/RecipeDetails', 'text!Templates/recipeDetailsTemplate.html'],
-  function(RecipeDetails, recipeDetailsTemplate) {
+  [
+    'jquery',
+    'underscore',
+    'backbone',
+    'Models/RecipeDetails',
+    'text!Templates/recipeDetailsTemplate.html'
+  ],
+  function(
+    $,
+    _,
+    Backbone,
+    RecipeDetails,
+    recipeDetailsTemplate
+  ) {
   const RecipeDetailsView = Backbone.View.extend({
     id: 'recipeDetails',
     model: RecipeDetails,

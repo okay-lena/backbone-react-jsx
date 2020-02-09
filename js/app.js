@@ -1,16 +1,20 @@
 require.config({
   paths: {
+    jquery: 'libs/jquery-3.4.1.min',
+    underscore: 'libs/underscore-min',
+    backbone: 'libs/backbone-min',
     text: 'libs/text'
   }
-
 });
 
 requirejs([
-    'eventAggregator',
-    'Views/AppView',
-    'Routers/Router',
+  'backbone',
+  'eventAggregator',
+  'Views/AppView',
+  'Routers/Router',
   ],
   function (
+    Backbone,
     eventAggregator,
     {AppView, recipeList},    // import destructed values
     Router,

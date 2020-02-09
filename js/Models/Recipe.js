@@ -1,4 +1,6 @@
-define(function(){
+define(
+  ['backbone'],
+  function(Backbone){
   const Recipe = Backbone.Model.extend({
     defaults: {
       "id": null,

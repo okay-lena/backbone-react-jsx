@@ -1,10 +1,16 @@
 define(
   [
+    'jquery',
+    'underscore',
+    'backbone',
     'Views/AppView',
     'Models/RecipeDetails',
     'Views/RecipeDetailsView'
   ],
   function (
+    $,
+    _,
+    Backbone,
     {AppView, recipeList},
     RecipeDetails,
     RecipeDetailsView
