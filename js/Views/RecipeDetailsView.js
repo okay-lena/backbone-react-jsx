@@ -5,21 +5,27 @@ define(
     'underscore',
     'backbone',
     'Models/RecipeDetails',
-    'text!Templates/recipeDetailsTemplate.html'
+    'react',
+    'reactDom',
+    'Templates/RecipeDetailsInfo'   // must be compiled from JSX to JS first to see in browser!
   ],
   function(
     $,
     _,
     Backbone,
     RecipeDetails,
-    recipeDetailsTemplate
+    React,
+    ReactDOM,
+    RecipeDetailsInfo
   ) {
   const RecipeDetailsView = Backbone.View.extend({
     id: 'recipeDetails',
     model: RecipeDetails,
-    template: _.template(recipeDetailsTemplate),
     render: function () {
-      this.$el.html(this.template(this.model.toJSON()))
+      ReactDOM.render(
+        React.createElement(RecipeDetailsInfo, this.model.toJSON(), null),
+        this.$el.get(0)
+      )
       return this // enable chained calls
     },
   })
