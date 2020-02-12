@@ -26,18 +26,20 @@ Here you tell react-tools and jsx to transpile all .jsx files from ./js/Template
 ## How to use compiled React component in Backbone.View
 Import it using requireJS:
 ```javascript
-define(['Templates/RecipeCard', ...otherModules], function(RecipeCard, ...otherDependencies) {
-  const RecipeView =  Backbone.View.extend({
-  ...
-  render: function () {
-      ReactDOM.render(
-        React.createElement(RecipeCard, this.model.toJSON(), null),
-        this.$el.get(0)
-      )
-      return this // enable chained calls
-    },
-  ...
-  })
-  return RecipeView
+define(
+  ['Templates/RecipeCard', 'react', 'reactDom', ...otherModules], 
+  function(RecipeCard, React, ReactDOM, ...otherDependencies) {
+    const RecipeView =  Backbone.View.extend({
+    ...
+    render: function () {
+        ReactDOM.render(
+          React.createElement(RecipeCard, this.model.toJSON(), null), 
+          this.$el.get(0)
+        )
+        return this // enable chained calls
+      },
+    ...
+    })
+   return RecipeView
 })
 ```
