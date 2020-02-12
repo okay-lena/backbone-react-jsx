@@ -61,7 +61,7 @@ define(
             //return response
           },
           error: function (xhr) {
-            alert("An error occurred: " + xhr.status + " " + xhr.statusText)
+            alert("An error occurred: " + xhr.status + " " + xhr.statusText + "\n" + xhr.responseJSON.message)
           }
         })
       })()
