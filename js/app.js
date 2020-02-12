@@ -3,7 +3,10 @@ require.config({
     jquery: 'libs/jquery-3.4.1.min',
     underscore: 'libs/underscore-min',
     backbone: 'libs/backbone-min',
-    text: 'libs/text'
+    text: 'libs/text',
+    react: 'libs/react.development',
+    reactDom: 'libs/react-dom.development',
+    jsx: 'libs/jsx'
   }
 });
 
@@ -11,13 +14,13 @@ requirejs([
   'backbone',
   'eventAggregator',
   'Views/AppView',
-  'Routers/Router',
+  'Routers/Router'
   ],
   function (
     Backbone,
     eventAggregator,
     {AppView, recipeList},    // import destructed values
-    Router,
+    Router
   ) {
 
     eventAggregator.on('recipe:selected', function (recipe) {
