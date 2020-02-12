@@ -1,3 +1,6 @@
+// to transpile JSX into JS run in CLI
+// node_modules\.bin\jsx -x jsx js\Templates js\Templates
+
 define(['react'], function(React) {
   const RecipeCard = props => {
     const { id, title, readyInMinutes, image } = props
