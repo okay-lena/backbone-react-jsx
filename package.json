@@ -5,5 +5,8 @@
     "grunt": "^1.0.4",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-uglify": "^4.0.1"
+  },
+  "dependencies": {
+    "react-tools": "^0.13.3"
   }
 }
