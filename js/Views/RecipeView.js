@@ -4,21 +4,26 @@ define(
     'underscore',
     'backbone',
     'eventAggregator',
-    'text!Templates/recipeTemplate.html'
+    'react',
+    'reactDom',
+    'Templates/RecipeCard'  // future compiled JS from JSX
   ],
   function (
     $,
     _,
     Backbone,
     eventAggregator,
-    recipeTemplate
+    React,
+    ReactDOM,
+    RecipeCard
   ) {
   const RecipeView =  Backbone.View.extend({
     tagName: 'li',
-    id: 'recipe-list',
-    template: _.template(recipeTemplate),
     render: function () {
-      this.$el.html(this.template(this.model.toJSON()))
+      ReactDOM.render(
+        React.createElement(RecipeCard, this.model.toJSON(), null),
+        this.$el.get(0)
+      )
       return this // enable chained calls
     },
     events: {
