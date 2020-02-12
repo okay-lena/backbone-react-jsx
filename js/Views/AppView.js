@@ -1,7 +1,21 @@
 // renders the full list of recipes calling RecipeView for each one
 define(
-  ['jquery', 'Collections/RecipeList', 'Views/RecipeView', 'Models/Recipe'],
-  function($, RecipeList, RecipeView, Recipe)  {
+  [
+    'jquery',
+    'underscore',
+    'backbone',
+    'Collections/RecipeList',
+    'Views/RecipeView',
+    'Models/Recipe'
+  ],
+  function(
+    $,
+    _,
+    Backbone,
+    RecipeList,
+    RecipeView,
+    Recipe
+  )  {
     // instance of the Collection
     const recipeList = new RecipeList()
 
