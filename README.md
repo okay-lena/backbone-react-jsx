@@ -4,7 +4,7 @@ Incorporate React JSX components into existing Backbone app, and use `ReactDOM.r
 
 ## Challenge
 Browsers do not understand JSX.<br />
-Although React can do it, Backbone does not transpile JSX to JS automatically. To do this, we need to use [react-tools](https://www.npmjs.com/package/react-tools)
+Although React can do it, Backbone does not transpile JSX to JS automatically. To do this, we need to use [react-tools](https://www.npmjs.com/package/react-tools) and [jsx.js](js/libs/jsx.js)
 
 ## Steps
 1. Install all dependencies from package.json running `npm install`.
