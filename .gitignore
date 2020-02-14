@@ -1,4 +1,5 @@
 /node_modules/
-/js/Templates/RecipeCard.js
+/js/Templates/*.js
+/js/Templates/*.js.map
 /js/Templates/.module-cache/
-/js/Templates/RecipeDetailsInfo.js
+/js/libs/dest/*
