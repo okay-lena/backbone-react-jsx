@@ -4,7 +4,13 @@ Incorporate React JSX components into existing Backbone app, and use `ReactDOM.r
 
 ## Challenge
 Browsers do not understand JSX.<br />
-Although React can do it, Backbone does not transpile JSX to JS automatically. To do this, we need to use [react-tools](https://www.npmjs.com/package/react-tools) and [jsx.js](js/libs/jsx.js)
+Although React can do it with pre-configured Babel, Backbone does not transpile JSX to JS automatically.<br />
+To do this, we need to use external transpiler:
+1. manually - we can use [react-tools](https://www.npmjs.com/package/react-tools) and [jsx.js](js/libs/jsx.js)
+1. automatically - we can use [Grunt](https://gruntjs.com/) and [Babel](https://babeljs.io/) with the following packages:
+```
+npm install --save-dev grunt-babel @babel/core @babel/preset-env @babel/preset-react
+```
 
 ## Steps
 1. Install all dependencies from package.json running `npm install`.
@@ -16,12 +22,20 @@ Although React can do it, Backbone does not transpile JSX to JS automatically. T
 
 
 ## How to transpile JSX into JS
+### Manually
 Run in CLI:
-```javascript
+```
 node_modules\.bin\jsx -x jsx js\Templates js\Templates
 ```
 Here you tell react-tools and jsx to transpile all .jsx files from ./js/Templates folder and put all resulting .js files to the same location.
 
+### Automatically
+Run in CLI:
+```
+grunt
+```
+
+Grunt is already configured in `Gruntfile.js` to use Babel to compile all .jsx files into .js.
 
 ## How to use compiled React component in Backbone.View
 Import it using requireJS:
